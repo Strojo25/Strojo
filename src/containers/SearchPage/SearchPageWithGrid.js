@@ -379,13 +379,21 @@ export class SearchPageComponent extends Component {
     // N.B. openMobileMap button is sticky.
     // For some reason, stickyness doesn't work on Safari, if the element is <button>
     return (
-      <Page
-        scrollingDisabled={scrollingDisabled}
-        description={description}
-        title={title}
-        schema={schema}
-      >
-        <TopbarContainer rootClassName={topbarClasses} currentSearchParams={validQueryParams} />
+        <Page
+  scrollingDisabled={scrollingDisabled}
+  description={description}
+  title={title}
+  schema={schema}
+>
+  <div className={css.stickySearchBar}>
+    <TopbarContainer
+      rootClassName={topbarClasses}
+      currentSearchParams={validQueryParams}
+    />
+  </div>
+
+  <div className={css.layoutWrapperContainer}>
+    …
         <div className={css.layoutWrapperContainer}>
           <aside className={css.layoutWrapperFilterColumn} data-testid="filterColumnAside">
             <div className={css.filterColumnContent}>
