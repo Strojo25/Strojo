@@ -319,3 +319,9 @@
 .mapRoot {
   background-color: var(--colorGrey100);
 }
+.stickySearchBar {
+  position: sticky;
+  top: 0;
+  z-index: var(--zIndexTopbar);
+  background: #fff;
+}
